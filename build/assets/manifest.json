@@ -1,0 +1,13 @@
+{
+  "name": "Toodles",
+	"short_name": "Toodles",
+	"theme_color": "#dd3737",
+	"background_color": "#ff8d8d",
+	"display": "standalone",
+	"start_url": "/",
+  "icons": [{
+    "src": "/assets/icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}
