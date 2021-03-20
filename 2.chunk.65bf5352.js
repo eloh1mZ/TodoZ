@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{uvaZ:function(e,t,c){"use strict";c.r(t);var n=c("mg/X");function b(e){let t,c;return{c(){t=Object(n.n)("h1"),c=Object(n.H)("Hello")},l(e){t=Object(n.g)(e,"H1",{});var b=Object(n.e)(t);c=Object(n.i)(b,"Hello"),b.forEach(n.m)},m(e,b){Object(n.r)(e,t,b),Object(n.b)(t,c)},p:n.v,i:n.v,o:n.v,d(e){e&&Object(n.m)(t)}}}class o extends n.a{constructor(e){super(),Object(n.q)(this,e,null,b,n.C,{})}}t.default=o}}]);
+//# sourceMappingURL=2.chunk.65bf5352.js.map
