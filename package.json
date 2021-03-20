@@ -1,0 +1,29 @@
+{
+  "name": "todo-z",
+  "version": "1.0.0",
+  "author": "eloh1m.com",
+  "license": "ISC",
+  "description": "Svelte + ServiceWorker",
+  "scripts": {
+    "build": "pwa export --routes /",
+    "start": "sirv build -s",
+    "watch": "pwa watch"
+  },
+  "dependencies": {
+    "navaid": "^1.0.0",
+    "sirv-cli": "^0.4.0"
+  },
+  "devDependencies": {
+    "@pwa/cli": "latest",
+    "@pwa/plugin-offline": "latest",
+    "@pwa/preset-svelte": "latest",
+    "svelte": "^3.1.0"
+  },
+  "browserslist": [
+    ">0.25%",
+    "last 3 version",
+    "not ie_mob 11",
+    "not ie 11",
+    "not dead"
+  ]
+}

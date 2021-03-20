@@ -1,0 +1,94 @@
+/* cyrillic */
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 100 1000;
+	font-display: swap;
+	src: url(./assets/fonts/cyrillic.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin */
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 100 1000;
+	font-display: swap;
+	src: url(./assets/fonts/latin.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: red;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: "JetBrains Mono", sans-serif;
+	background-color: #eee;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0)
+}
+
+svg {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.checkbox__body {
+	display: block;
+	transition: all .5s;
+	width: var(--size);
+	height: var(--size);
+}
+.checkbox__input:focus-visible + .checkbox__body {
+	box-shadow: 0 0 0 2px var(--bg),
+				0 0 0 4px #808080;
+}
+
+.checkbox__input:checked + .checkbox__body {
+	transform: translateY(calc(var(--size) * .2));
+}
+
+.checkbox__input:checked + .checkbox__body:before,
+.checkbox__input:checked + .checkbox__body:after {
+	background-color: var(--green);
+	transform-origin: calc(var(--size) * .125) calc(var(--size) * .125);
+	margin-top: calc(var(--size) * .5);
+	margin-left: calc(var(--size) * .25);
+	transform: scale(-1) rotate(45deg);
+}
+.checkbox__input:checked + .checkbox__body:before {
+	width: calc(var(--size) * .65);
+}
+.checkbox__body:before,
+.checkbox__body:after {
+	display: block;
+	content: '';
+	width: calc(var(--size) * .25);
+	height: calc(var(--size) * .25);
+	background-color: var(--red);
+	position: absolute;
+	transform: rotate(45deg);
+	transition: all .5s;
+	border-radius: calc(var(--size) * .25);
+}
+.checkbox__body:before {
+	margin-top: calc(var(--size) * .375);
+	width: var(--size);
+}
+.checkbox__body:after {
+	margin-left: calc(var(--size) * .375);
+	height: var(--size);
+}
